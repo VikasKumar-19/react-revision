@@ -24,5 +24,20 @@ let container = React.createElement("div", { id: "container" }, [
   newHeading,
 ]);
 
+const ChildComponent = () => <div>I am a child component</div>;
+
+const FunComponent = () => {
+  return (
+    <div>
+      {/* react element */}
+      {container} 
+      <h1>Functional Component</h1>
+      <h2>This is h2 tag</h2>
+      {/* react component */}
+      <ChildComponent />
+    </div>
+  );
+};
+
 let root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(container);
+root.render(<FunComponent />);
