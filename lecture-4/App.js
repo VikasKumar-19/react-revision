@@ -3,31 +3,33 @@
 
 import React from "react";
 import ReactDOM from "react-dom/client";
+import "./global.css";
 
 const Heading = () => {
   return (
-    <div>
+    <div className="header">
       <img
-      width={85}
+        width={85}
         alt="logo"
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX0oZvf_Vj2VpP9fp5NLte238mjaO3LScZag&usqp=CAU"
       />
-      <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Contact</li>
+      <ul className="nav-list">
+        <li className="nav-item">Home</li>
+        <li className="nav-item">About</li>
+        <li className="nav-item">Contact</li>
       </ul>
     </div>
   );
+};
+
+const Body = () => {
+  return <div>body</div>;
 };
 
 const Footer = () => {
   return <div>Footer</div>;
 };
 
-const Body = () => {
-  return <div>body</div>;
-};
 const AppLayout = () => {
   return (
     <>
